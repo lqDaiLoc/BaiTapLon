@@ -43,15 +43,16 @@ namespace BaiTapLon_KiemThuPhanMem
                 } 
             }
         }
-        
+        //BUS_ChucNang bus = new BUS_ChucNang();
+        //tienLoaiPizza = bus.getTienBanh(rad.Text);
         private void CheckedChange_radTenBanh(object sender, EventArgs e)
         {
             RadioButton rad = sender as RadioButton;
             lblTenBanh.Text = rad.Text;
             if (rad.Checked)
             {
-                BUS_ChucNang bus = new BUS_ChucNang();
-                tienLoaiPizza = bus.getTienBanh(rad.Text);
+                
+                tienLoaiPizza = 99000;
             }
             lblTienTenBanh.Text = tienLoaiPizza.ToString();
         }
@@ -62,8 +63,14 @@ namespace BaiTapLon_KiemThuPhanMem
             lblSize.Text = rad.Text;
             if (rad.Checked)
             {
-                BUS_ChucNang bus = new BUS_ChucNang();
-                tienSize = bus.getSizeBanh(rad.Text);
+                //BUS_ChucNang bus = new BUS_ChucNang();
+                //tienSize = bus.getSizeBanh(rad.Text);
+                if (rad.Text == "Nhỏ")
+                    tienSize = 1.0;
+                if (rad.Text == "Thường")
+                    tienSize = 1.5;
+                if (rad.Text == "Lớn")
+                    tienSize = 2.0;
                 lblTienSize.Text = "x" + tienSize.ToString();
                 
 

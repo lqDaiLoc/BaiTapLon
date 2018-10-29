@@ -27,7 +27,7 @@ namespace BUS
             try
             {
 
-                string s = cmd.ExecuteScalar().ToString();
+                string s = (string)cmd.ExecuteScalar();
                 kq = double.Parse(s);
                 dp.DisConnecTion();
                 return kq;

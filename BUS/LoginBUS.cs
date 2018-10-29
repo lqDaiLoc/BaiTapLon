@@ -20,7 +20,7 @@ namespace BUS
         {
             DataProvider dp = new DataProvider();
             dp.ConnecTion();
-            string sqlStr = "SELECT ChucVu FROM NV WHERE MaNV = '" + userName + "' AND Ten = '" + passWord + "'";
+            string sqlStr = "SELECT ChucVu FROM NhanVien WHERE MaNV = N'" + userName + "' AND Ten = N'" + passWord + "'";
             SqlCommand cmd = new SqlCommand(sqlStr);
             cmd.Connection = dp.cnn;
             cmd.CommandText = sqlStr;
@@ -28,7 +28,7 @@ namespace BUS
 
             try
             {
-                chucVu = (string)cmd.ExecuteScalar();
+                chucVu = cmd.ExecuteScalar().ToString();
 
                 dp.DisConnecTion();
                 if (chucVu != null)
