@@ -43,7 +43,7 @@ namespace DAO
             da.Fill(data, "Loai");
             da.SelectCommand.CommandText = "Select * from Users";
             da.Fill(data, "Users");
-
+            
             return data;            
         }
 
@@ -54,6 +54,7 @@ namespace DAO
             DataTable tb = data.Tables["Banh"];
             return tb;
         }
+        
         // lay table DonHang
         public DataTable GetDataTableDonHang()
         {
@@ -111,6 +112,30 @@ namespace DAO
             return tb;
         }
 
+        // update
+        // update Table Banh
+        public void updateTableBanh(DataTable tb)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Banh", cnn);
+            SqlCommandBuilder scb = new SqlCommandBuilder(da);
+            da.Update(tb);
+        }
+        // update Table Don Hang
+        public void updateTableDonHang(DataTable tb)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM DonHang", cnn);
+            SqlCommandBuilder scb = new SqlCommandBuilder(da);
+            da.Update(tb);
+        }
+        // update Table DonHang_Banh
+        public void updateTableDonHang_Banh(DataTable tb)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM DonHang_Banh", cnn);
+            SqlCommandBuilder scb = new SqlCommandBuilder(da);
+            da.Update(tb);
+        }
+
+        // ConnecTion
         public void ConnecTion()
         {
             try

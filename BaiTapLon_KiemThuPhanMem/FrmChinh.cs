@@ -24,7 +24,7 @@ namespace BaiTapLon_KiemThuPhanMem
         double tienSize = 1;
         double tienTpPhu = 0;
         double tongTien = 0;
-         
+        BUS_ChucNang bus = new BUS_ChucNang();
 
         private void FrmChinh_Load(object sender, EventArgs e)
         {
@@ -43,16 +43,16 @@ namespace BaiTapLon_KiemThuPhanMem
                 } 
             }
         }
-        //BUS_ChucNang bus = new BUS_ChucNang();
-        //tienLoaiPizza = bus.getTienBanh(rad.Text);
+        
         private void CheckedChange_radTenBanh(object sender, EventArgs e)
         {
+            
             RadioButton rad = sender as RadioButton;
             lblTenBanh.Text = rad.Text;
             if (rad.Checked)
             {
-                
-                tienLoaiPizza = 99000;
+                tienLoaiPizza = bus.getTienHang(rad.Text);
+                //tienLoaiPizza = 99000;
             }
             lblTienTenBanh.Text = tienLoaiPizza.ToString();
         }
@@ -63,14 +63,7 @@ namespace BaiTapLon_KiemThuPhanMem
             lblSize.Text = rad.Text;
             if (rad.Checked)
             {
-                //BUS_ChucNang bus = new BUS_ChucNang();
-                //tienSize = bus.getSizeBanh(rad.Text);
-                if (rad.Text == "Nhỏ")
-                    tienSize = 1.0;
-                if (rad.Text == "Thường")
-                    tienSize = 1.5;
-                if (rad.Text == "Lớn")
-                    tienSize = 2.0;
+                tienSize = bus.getTienHang(rad.Text);
                 lblTienSize.Text = "x" + tienSize.ToString();
                 
 
@@ -115,52 +108,52 @@ namespace BaiTapLon_KiemThuPhanMem
             if (txtSoLuongCoCa.Text != "0")
             {
                 lblThucUong.Text += "CoCa (" + txtSoLuongCoCa.Text + ")\n";
-                tienNuoc += 10000 * int.Parse(txtSoLuongCoCa.Text);
+                tienNuoc += (bus.getTienHang("CoCa")) * int.Parse(txtSoLuongCoCa.Text);
             }
             if (txtSoLuongSuprise.Text != "0")
             {
                 lblThucUong.Text += "Suprise (" + txtSoLuongSuprise.Text + ")\n";
-                tienNuoc += 10000 * int.Parse(txtSoLuongSuprise.Text);
+                tienNuoc += (bus.getTienHang("Suprise")) * int.Parse(txtSoLuongSuprise.Text);
             }
             if (txtSoLuongNumberOne.Text != "0")
             {
                 lblThucUong.Text += "Number One (" + txtSoLuongNumberOne.Text + ")\n";
-                tienNuoc += 10000 * int.Parse(txtSoLuongNumberOne.Text);
+                tienNuoc += (bus.getTienHang("Number One")) * int.Parse(txtSoLuongNumberOne.Text);
             }
             if (txtSoLuongSuoi.Text != "0")
             {
                 lblThucUong.Text += "Nước Suối (" + txtSoLuongSuoi.Text + ")\n";
-                tienNuoc += 7000 * int.Parse(txtSoLuongSuoi.Text);
+                tienNuoc += (bus.getTienHang("Nước Suối")) * int.Parse(txtSoLuongSuoi.Text);
             }
             if (txtSoLuongDrThanh.Text != "0")
             { 
             lblThucUong.Text += "DrThanh (" + txtSoLuongDrThanh.Text + ")\n";
-                tienNuoc += 12000 * int.Parse(txtSoLuongDrThanh.Text);
+                tienNuoc += (bus.getTienHang("DrThanh")) * int.Parse(txtSoLuongDrThanh.Text);
             }
             if (txtSoLuongPesi.Text != "0")
             {
-                lblThucUong.Text += "Pesi (" + txtSoLuongPesi.Text + ")\n";
-                tienNuoc += 10000 * int.Parse(txtSoLuongPesi.Text);
+                lblThucUong.Text += "Pepsi (" + txtSoLuongPesi.Text + ")\n";
+                tienNuoc += (bus.getTienHang("Pepsi")) * int.Parse(txtSoLuongPesi.Text);
             }
             if (txtSoLuongCam.Text != "0")
             {
                 lblThucUong.Text += "Cam (" + txtSoLuongCam.Text + ")\n";
-                tienNuoc += 12000 * int.Parse(txtSoLuongCam.Text);
+                tienNuoc += (bus.getTienHang("Cam")) * int.Parse(txtSoLuongCam.Text);
             }
             if (txtSoLuongBiDao.Text != "0")
             {
                 lblThucUong.Text += "Bí Đao (" + txtSoLuongBiDao.Text + ")\n";
-                tienNuoc += 8000 * int.Parse(txtSoLuongBiDao.Text);
+                tienNuoc += (bus.getTienHang("Bí Đao")) * int.Parse(txtSoLuongBiDao.Text);
             }
             if (txtSoLuongSting.Text != "0")
             {
                 lblThucUong.Text += "Sting (" + txtSoLuongSting.Text + ")\n";
-                tienNuoc += 11000 * int.Parse(txtSoLuongSting.Text);
+                tienNuoc += (bus.getTienHang("Sting")) * int.Parse(txtSoLuongSting.Text);
             }
             if (txtSoLuongSoda.Text != "0")
             {
                 lblThucUong.Text += "SoDa (" + txtSoLuongSoda.Text + ")\n";
-                tienNuoc += 10000 * int.Parse(txtSoLuongSoda.Text);
+                tienNuoc += (bus.getTienHang("SoDa")) * int.Parse(txtSoLuongSoda.Text);
             }
             lblTienNuoc.Text = tienNuoc.ToString();
             tongTien += tienNuoc;
@@ -170,21 +163,17 @@ namespace BaiTapLon_KiemThuPhanMem
         private void CheckedChanged_TpPhu(object sender, EventArgs e)
         {
             CheckBox check = sender as CheckBox;
-            if(check.Checked)
+            if (check.Checked)
             {
                 lblTpPhu.Text += check.Text + ", ";
-                tienTpPhu += 30000;
-                
+                tienTpPhu += bus.getTienHang(check.Text);
             }
             if(!check.Checked )
             {
-                //check.Text.Length
                 lblTpPhu.Text = lblTpPhu.Text.Replace(check.Text + ", ", "");
-                tienTpPhu -= 30000;
-              
+                tienTpPhu -= bus.getTienHang(check.Text);
             }
-            lblTienPhu.Text = tienTpPhu.ToString();
-           
+            lblTienPhu.Text = tienTpPhu.ToString();           
         }
         
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -253,8 +242,8 @@ namespace BaiTapLon_KiemThuPhanMem
             RadioButton rad = sender as RadioButton;
             if (rad.Checked)
             {
-                lblVienBanh.Text = "Viền Bánh " + rad.Text;
-                tienVoBanh = 50000;
+                lblVienBanh.Text = rad.Text;
+                tienVoBanh = bus.getTienHang(rad.Text) ;
             }
             
             lblTienVoBanh.Text = tienVoBanh.ToString();
@@ -284,5 +273,6 @@ namespace BaiTapLon_KiemThuPhanMem
             }
         }
 
+       
     }
 }

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChinh));
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.tab = new System.Windows.Forms.TabControl();
             this.tPgTen = new System.Windows.Forms.TabPage();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -293,10 +293,10 @@
             this.radRau.Location = new System.Drawing.Point(750, 4);
             this.radRau.Margin = new System.Windows.Forms.Padding(4);
             this.radRau.Name = "radRau";
-            this.radRau.Size = new System.Drawing.Size(43, 40);
+            this.radRau.Size = new System.Drawing.Size(55, 40);
             this.radRau.TabIndex = 4;
             this.radRau.TabStop = true;
-            this.radRau.Text = "Rau";
+            this.radRau.Text = "BRau";
             this.radRau.UseVisualStyleBackColor = true;
             this.radRau.CheckedChanged += new System.EventHandler(this.CheckedChange_radTenBanh);
             // 
@@ -307,10 +307,10 @@
             this.radTom.Location = new System.Drawing.Point(580, 4);
             this.radTom.Margin = new System.Windows.Forms.Padding(4);
             this.radTom.Name = "radTom";
-            this.radTom.Size = new System.Drawing.Size(46, 40);
+            this.radTom.Size = new System.Drawing.Size(58, 40);
             this.radTom.TabIndex = 3;
             this.radTom.TabStop = true;
-            this.radTom.Text = "Tôm";
+            this.radTom.Text = "BTôm";
             this.radTom.UseVisualStyleBackColor = true;
             this.radTom.CheckedChanged += new System.EventHandler(this.CheckedChange_radTenBanh);
             // 
@@ -321,10 +321,10 @@
             this.radThapCam.Location = new System.Drawing.Point(386, 4);
             this.radThapCam.Margin = new System.Windows.Forms.Padding(4);
             this.radThapCam.Name = "radThapCam";
-            this.radThapCam.Size = new System.Drawing.Size(90, 40);
+            this.radThapCam.Size = new System.Drawing.Size(102, 40);
             this.radThapCam.TabIndex = 2;
             this.radThapCam.TabStop = true;
-            this.radThapCam.Text = "Thập Cẩm";
+            this.radThapCam.Text = "BThập Cẩm";
             this.radThapCam.UseVisualStyleBackColor = true;
             this.radThapCam.CheckedChanged += new System.EventHandler(this.CheckedChange_radTenBanh);
             // 
@@ -335,10 +335,10 @@
             this.radXucXich.Location = new System.Drawing.Point(212, 4);
             this.radXucXich.Margin = new System.Windows.Forms.Padding(4);
             this.radXucXich.Name = "radXucXich";
-            this.radXucXich.Size = new System.Drawing.Size(80, 40);
+            this.radXucXich.Size = new System.Drawing.Size(92, 40);
             this.radXucXich.TabIndex = 1;
             this.radXucXich.TabStop = true;
-            this.radXucXich.Text = "Xúc Xích";
+            this.radXucXich.Text = "BXúc Xích";
             this.radXucXich.UseVisualStyleBackColor = true;
             this.radXucXich.CheckedChanged += new System.EventHandler(this.CheckedChange_radTenBanh);
             // 
@@ -349,10 +349,10 @@
             this.radHaiSan.Location = new System.Drawing.Point(24, 4);
             this.radHaiSan.Margin = new System.Windows.Forms.Padding(4);
             this.radHaiSan.Name = "radHaiSan";
-            this.radHaiSan.Size = new System.Drawing.Size(73, 40);
+            this.radHaiSan.Size = new System.Drawing.Size(85, 40);
             this.radHaiSan.TabIndex = 0;
             this.radHaiSan.TabStop = true;
-            this.radHaiSan.Text = "Hải Sản";
+            this.radHaiSan.Text = "BHải Sản";
             this.radHaiSan.UseVisualStyleBackColor = true;
             this.radHaiSan.CheckedChanged += new System.EventHandler(this.CheckedChange_radTenBanh);
             // 
@@ -817,10 +817,10 @@
             this.radDeBanh_Day.Location = new System.Drawing.Point(80, 262);
             this.radDeBanh_Day.Margin = new System.Windows.Forms.Padding(4);
             this.radDeBanh_Day.Name = "radDeBanh_Day";
-            this.radDeBanh_Day.Size = new System.Drawing.Size(60, 24);
+            this.radDeBanh_Day.Size = new System.Drawing.Size(86, 24);
             this.radDeBanh_Day.TabIndex = 6;
             this.radDeBanh_Day.TabStop = true;
-            this.radDeBanh_Day.Text = "Dày";
+            this.radDeBanh_Day.Text = "Đế Dày";
             this.radDeBanh_Day.UseVisualStyleBackColor = true;
             this.radDeBanh_Day.CheckedChanged += new System.EventHandler(this.CheckedChang_DeBanh);
             // 
@@ -830,10 +830,10 @@
             this.radDeBanh_Vua.Location = new System.Drawing.Point(80, 200);
             this.radDeBanh_Vua.Margin = new System.Windows.Forms.Padding(4);
             this.radDeBanh_Vua.Name = "radDeBanh_Vua";
-            this.radDeBanh_Vua.Size = new System.Drawing.Size(59, 24);
+            this.radDeBanh_Vua.Size = new System.Drawing.Size(90, 24);
             this.radDeBanh_Vua.TabIndex = 5;
             this.radDeBanh_Vua.TabStop = true;
-            this.radDeBanh_Vua.Text = "Vừa";
+            this.radDeBanh_Vua.Text = "Đế  Vừa";
             this.radDeBanh_Vua.UseVisualStyleBackColor = true;
             this.radDeBanh_Vua.CheckedChanged += new System.EventHandler(this.CheckedChang_DeBanh);
             // 
@@ -843,10 +843,10 @@
             this.radDeBanh_Mong.Location = new System.Drawing.Point(80, 128);
             this.radDeBanh_Mong.Margin = new System.Windows.Forms.Padding(4);
             this.radDeBanh_Mong.Name = "radDeBanh_Mong";
-            this.radDeBanh_Mong.Size = new System.Drawing.Size(71, 24);
+            this.radDeBanh_Mong.Size = new System.Drawing.Size(97, 24);
             this.radDeBanh_Mong.TabIndex = 4;
             this.radDeBanh_Mong.TabStop = true;
-            this.radDeBanh_Mong.Text = "Mõng";
+            this.radDeBanh_Mong.Text = "Đế Mỏng";
             this.radDeBanh_Mong.UseVisualStyleBackColor = true;
             this.radDeBanh_Mong.CheckedChanged += new System.EventHandler(this.CheckedChang_DeBanh);
             // 
@@ -863,26 +863,26 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(412, 262);
+            this.radioButton2.Location = new System.Drawing.Point(397, 262);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 24);
+            this.radioButton2.Size = new System.Drawing.Size(129, 24);
             this.radioButton2.TabIndex = 32;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Phô Mai";
+            this.radioButton2.Text = "Viền Phô Mai";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.CheckedChang_VienBanh);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(128, 262);
+            this.radioButton1.Location = new System.Drawing.Point(111, 262);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(97, 24);
+            this.radioButton1.Size = new System.Drawing.Size(135, 24);
             this.radioButton1.TabIndex = 7;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Xúc Xích";
+            this.radioButton1.Text = "Viền Xúc Xích";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.CheckedChang_VienBanh);
             // 
@@ -1297,16 +1297,16 @@
             this.clmThuocUong,
             this.clmTien});
             this.listView1.FullRowSelect = true;
-            listViewGroup4.Header = "ListViewGroup";
-            listViewGroup4.Name = "listViewGroup1";
-            listViewGroup5.Header = "ListViewGroup";
-            listViewGroup5.Name = "listViewGroup2";
-            listViewGroup6.Header = "ListViewGroup";
-            listViewGroup6.Name = "listViewGroup3";
+            listViewGroup13.Header = "ListViewGroup";
+            listViewGroup13.Name = "listViewGroup1";
+            listViewGroup14.Header = "ListViewGroup";
+            listViewGroup14.Name = "listViewGroup2";
+            listViewGroup15.Header = "ListViewGroup";
+            listViewGroup15.Name = "listViewGroup3";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup13,
+            listViewGroup14,
+            listViewGroup15});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(336, 36);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);

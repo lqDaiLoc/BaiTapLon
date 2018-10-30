@@ -13,22 +13,22 @@ namespace BUS
     public class BUS_ChucNang
     {
         //lay gia tien cua ten banh
-        public double getTienBanh(string tenBanh)
+        public double getTienHang(string tenBanh)
         {
-            double kq ;
+            double kq = 0;
             DataProvider dp = new DataProvider();
             dp.ConnecTion();
-            
-            string sql = "SELECT GiaHang FROM Hang WHERE TenHang = N'" + "B"+ tenBanh + "'";
-            SqlCommand cmd = new SqlCommand(sql);
-            cmd.Connection = dp.cnn;
-            cmd.CommandText = sql;
-            cmd.CommandType = CommandType.Text;
+            DataTable tb_Banh = dp.GetDataTableHang();
             try
-            {
-
-                string s = (string)cmd.ExecuteScalar();
-                kq = double.Parse(s);
+            {   
+                foreach(DataRow row in tb_Banh.Rows)
+                {
+                    if (row[1].ToString() == (tenBanh))
+                    {
+                        kq = double.Parse(row[5].ToString());
+                        return kq;
+                    }
+                }
                 dp.DisConnecTion();
                 return kq;
             }
@@ -45,6 +45,8 @@ namespace BUS
 
         }
 
+        //
+        
         // lay size banh
         public double getSizeBanh(string SizeBanh)
         {
