@@ -978,7 +978,6 @@
             this.txtSoLuongSoda.TabIndex = 37;
             this.txtSoLuongSoda.Text = "0";
             this.txtSoLuongSoda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSoda.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongSoda.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox19
@@ -1002,7 +1001,6 @@
             this.txtSoLuongSting.TabIndex = 35;
             this.txtSoLuongSting.Text = "0";
             this.txtSoLuongSting.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSting.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongSting.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox17
@@ -1026,7 +1024,6 @@
             this.txtSoLuongBiDao.TabIndex = 33;
             this.txtSoLuongBiDao.Text = "0";
             this.txtSoLuongBiDao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongBiDao.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongBiDao.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox18
@@ -1050,7 +1047,6 @@
             this.txtSoLuongCam.TabIndex = 31;
             this.txtSoLuongCam.Text = "0";
             this.txtSoLuongCam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongCam.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongCam.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox16
@@ -1074,7 +1070,6 @@
             this.txtSoLuongPesi.TabIndex = 29;
             this.txtSoLuongPesi.Text = "0";
             this.txtSoLuongPesi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongPesi.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongPesi.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox15
@@ -1111,7 +1106,6 @@
             this.txtSoLuongSuoi.TabIndex = 26;
             this.txtSoLuongSuoi.Text = "0";
             this.txtSoLuongSuoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSuoi.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongSuoi.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // txtSoLuongNumberOne
@@ -1124,7 +1118,6 @@
             this.txtSoLuongNumberOne.TabIndex = 25;
             this.txtSoLuongNumberOne.Text = "0";
             this.txtSoLuongNumberOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongNumberOne.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongNumberOne.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // txtSoLuongSuprise
@@ -1137,7 +1130,6 @@
             this.txtSoLuongSuprise.TabIndex = 24;
             this.txtSoLuongSuprise.Text = "0";
             this.txtSoLuongSuprise.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSuprise.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongSuprise.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox5
@@ -1194,7 +1186,6 @@
             this.txtSoLuongCoCa.TabIndex = 19;
             this.txtSoLuongCoCa.Text = "0";
             this.txtSoLuongCoCa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongCoCa.Click += new System.EventHandler(this.txtThucUong_Click);
             this.txtSoLuongCoCa.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox1

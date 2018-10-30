@@ -95,71 +95,87 @@ namespace BaiTapLon_KiemThuPhanMem
             
         }
 
-        private void txtThucUong_Click(object sender, EventArgs e)
-        {
-            //TextBox txt = sender as TextBox;
-            //txt.Text = "";
-        }
         
+        //Chon nước uống
         private void btnChonNuoc_Click(object sender, EventArgs e)
         {
             lblThucUong.Text = "";
             tienNuoc = 0;
-            if (txtSoLuongCoCa.Text != "0")
+            int slCoCa = int.Parse(txtSoLuongCoCa.Text);
+            txtSoLuongCoCa.Text = slCoCa.ToString();
+            if (slCoCa != 0)
             {
-                lblThucUong.Text += "CoCa (" + txtSoLuongCoCa.Text + ")\n";
-                tienNuoc += (bus.getTienHang("CoCa")) * int.Parse(txtSoLuongCoCa.Text);
+                lblThucUong.Text += "CoCa (" + slCoCa + ")\n";
+                tienNuoc += (bus.getTienHang("CoCa")) * slCoCa;
             }
-            if (txtSoLuongSuprise.Text != "0")
+            int slSuprise = int.Parse(txtSoLuongSuprise.Text);
+            txtSoLuongSuprise.Text = slSuprise.ToString();
+            if (slSuprise != 0)
             {
-                lblThucUong.Text += "Suprise (" + txtSoLuongSuprise.Text + ")\n";
-                tienNuoc += (bus.getTienHang("Suprise")) * int.Parse(txtSoLuongSuprise.Text);
+                lblThucUong.Text += "Suprise (" + slSuprise + ")\n";
+                tienNuoc += (bus.getTienHang("Suprise")) * slSuprise;
             }
-            if (txtSoLuongNumberOne.Text != "0")
+            int slNumber1 = int.Parse(txtSoLuongNumberOne.Text);
+            txtSoLuongNumberOne.Text = slNumber1.ToString();
+            if (slNumber1 != 0)
             {
-                lblThucUong.Text += "Number One (" + txtSoLuongNumberOne.Text + ")\n";
-                tienNuoc += (bus.getTienHang("Number One")) * int.Parse(txtSoLuongNumberOne.Text);
+                lblThucUong.Text += "Number One (" + slNumber1 + ")\n";
+                tienNuoc += (bus.getTienHang("Number One")) * slNumber1;
             }
-            if (txtSoLuongSuoi.Text != "0")
+            int slSuoi = int.Parse(txtSoLuongSuoi.Text);
+            txtSoLuongSuoi.Text = slSuoi.ToString();
+            if (slSuoi != 0)
             {
-                lblThucUong.Text += "Nước Suối (" + txtSoLuongSuoi.Text + ")\n";
-                tienNuoc += (bus.getTienHang("Nước Suối")) * int.Parse(txtSoLuongSuoi.Text);
+                lblThucUong.Text += "Nước Suối (" + slSuoi + ")\n";
+                tienNuoc += (bus.getTienHang("Nước Suối")) * slSuoi;
             }
-            if (txtSoLuongDrThanh.Text != "0")
+            int slDrThanh = int.Parse(txtSoLuongDrThanh.Text);
+            txtSoLuongDrThanh.Text = slDrThanh.ToString();
+            if (slDrThanh != 0)
             { 
-            lblThucUong.Text += "DrThanh (" + txtSoLuongDrThanh.Text + ")\n";
-                tienNuoc += (bus.getTienHang("DrThanh")) * int.Parse(txtSoLuongDrThanh.Text);
+                lblThucUong.Text += "DrThanh (" + slDrThanh + ")\n";
+                tienNuoc += (bus.getTienHang("DrThanh")) * slDrThanh;
             }
-            if (txtSoLuongPesi.Text != "0")
+            int slPepsi = int.Parse(txtSoLuongPesi.Text);
+            txtSoLuongPesi.Text = slPepsi.ToString();
+            if (slPepsi != 0)
             {
-                lblThucUong.Text += "Pepsi (" + txtSoLuongPesi.Text + ")\n";
-                tienNuoc += (bus.getTienHang("Pepsi")) * int.Parse(txtSoLuongPesi.Text);
+                lblThucUong.Text += "Pepsi (" + slPepsi + ")\n";
+                tienNuoc += (bus.getTienHang("Pepsi")) * slPepsi;
             }
-            if (txtSoLuongCam.Text != "0")
+            int slCam = int.Parse(txtSoLuongCam.Text);
+            txtSoLuongCam.Text = slCam.ToString();
+            if (slCam != 0)
             {
-                lblThucUong.Text += "Cam (" + txtSoLuongCam.Text + ")\n";
-                tienNuoc += (bus.getTienHang("Cam")) * int.Parse(txtSoLuongCam.Text);
+                lblThucUong.Text += "Cam (" + slCam + ")\n";
+                tienNuoc += (bus.getTienHang("Cam")) * slCam;
             }
-            if (txtSoLuongBiDao.Text != "0")
+            int slBiDao = int.Parse(txtSoLuongBiDao.Text);
+            txtSoLuongBiDao.Text = slBiDao.ToString();
+            if (slBiDao != 0)
             {
-                lblThucUong.Text += "Bí Đao (" + txtSoLuongBiDao.Text + ")\n";
-                tienNuoc += (bus.getTienHang("Bí Đao")) * int.Parse(txtSoLuongBiDao.Text);
+                lblThucUong.Text += "Bí Đao (" + slBiDao + ")\n";
+                tienNuoc += (bus.getTienHang("Bí Đao")) * slBiDao;
             }
-            if (txtSoLuongSting.Text != "0")
+            int slSting = int.Parse(txtSoLuongSting.Text);
+            txtSoLuongSting.Text = slSting.ToString();
+            if (slSting != 0)
             {
-                lblThucUong.Text += "Sting (" + txtSoLuongSting.Text + ")\n";
-                tienNuoc += (bus.getTienHang("Sting")) * int.Parse(txtSoLuongSting.Text);
+                lblThucUong.Text += "Sting (" + slSting + ")\n";
+                tienNuoc += (bus.getTienHang("Sting")) * slSting;
             }
-            if (txtSoLuongSoda.Text != "0")
+            int slSoda = int.Parse(txtSoLuongSoda.Text);
+            txtSoLuongSoda.Text = slSoda.ToString();
+            if (slSoda != 0)
             {
-                lblThucUong.Text += "SoDa (" + txtSoLuongSoda.Text + ")\n";
-                tienNuoc += (bus.getTienHang("SoDa")) * int.Parse(txtSoLuongSoda.Text);
+                lblThucUong.Text += "SoDa (" + slSoda + ")\n";
+                tienNuoc += (bus.getTienHang("SoDa")) * slSoda;
             }
             lblTienNuoc.Text = tienNuoc.ToString();
             tongTien += tienNuoc;
             
         }
-
+        // CHon tp Phu
         private void CheckedChanged_TpPhu(object sender, EventArgs e)
         {
             CheckBox check = sender as CheckBox;
@@ -175,7 +191,32 @@ namespace BaiTapLon_KiemThuPhanMem
             }
             lblTienPhu.Text = tienTpPhu.ToString();           
         }
-        
+
+        // Chon De Banh
+        private void CheckedChang_DeBanh(object sender, EventArgs e)
+        {
+            RadioButton rad = sender as RadioButton;
+            if (rad.Checked)
+            {
+                lblDeBanh.Text = "Đế Bánh " + rad.Text;
+            }
+            else
+                lblDeBanh.Text = "";
+
+        }
+        // Chon Vien Banh
+        private void CheckedChang_VienBanh(object sender, EventArgs e)
+        {
+            RadioButton rad = sender as RadioButton;
+            if (rad.Checked)
+            {
+                lblVienBanh.Text = rad.Text;
+                tienVoBanh = bus.getTienHang(rad.Text);
+            }
+
+            lblTienVoBanh.Text = tienVoBanh.ToString();
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (lblTenBanh.Text != "")
@@ -189,6 +230,10 @@ namespace BaiTapLon_KiemThuPhanMem
                 pizza.SubItems.Add(tongTien.ToString());
                 listView1.Items.Add(pizza);
                 
+                
+                
+                
+                //----------------------------------------------------------------------------------------------------------
                 // Thanh phan phu
                 checkBox1.Checked = checkBox2.Checked = checkBox3.Checked = checkBox4.Checked = checkBox5.Checked = false;
                 checkBox6.Checked = checkBox7.Checked = checkBox8.Checked = checkBox9.Checked = false;
@@ -207,7 +252,7 @@ namespace BaiTapLon_KiemThuPhanMem
                 tienLoaiPizza = tienNuoc = tienSize = tienTpPhu = tienVoBanh = 0;
                 // label tien
                 lblTienNuoc.Text = lblTienPhu.Text = lblTienSize.Text = lblTienTenBanh.Text = lblTienVoBanh.Text = "";
-
+                //----------------------------------------------------------------------------------------------------------
             }
             else
             {
@@ -225,29 +270,7 @@ namespace BaiTapLon_KiemThuPhanMem
 
         }
 
-        private void CheckedChang_DeBanh(object sender, EventArgs e)
-        {
-            RadioButton rad = sender as RadioButton;
-            if (rad.Checked)
-            {
-                lblDeBanh.Text = "Đế Bánh " + rad.Text;
-            }
-            else
-                lblDeBanh.Text = "";
-
-        }
-
-        private void CheckedChang_VienBanh(object sender, EventArgs e)
-        {
-            RadioButton rad = sender as RadioButton;
-            if (rad.Checked)
-            {
-                lblVienBanh.Text = rad.Text;
-                tienVoBanh = bus.getTienHang(rad.Text) ;
-            }
-            
-            lblTienVoBanh.Text = tienVoBanh.ToString();
-        }
+        
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
