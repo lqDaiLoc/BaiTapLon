@@ -45,7 +45,15 @@ namespace BUS
 
         }
 
-        //
+        //Lay Thong tin hang
+        public void GetDataRowHang(DataTable tb ,string tenHang)
+        {
+            DataRow row = tb.NewRow();
+            DataProvider dp = new DataProvider();
+            SqlDataAdapter adapter = new SqlDataAdapter("Select * from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
+            adapter.Fill(tb);
+
+        }
         
         // lay size banh
         public double getSizeBanh(string SizeBanh)

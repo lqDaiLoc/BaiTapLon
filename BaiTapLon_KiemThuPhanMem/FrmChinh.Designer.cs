@@ -147,6 +147,7 @@
             this.lblTienSize = new System.Windows.Forms.Label();
             this.lblTienVoBanh = new System.Windows.Forms.Label();
             this.lblTienNuoc = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tab.SuspendLayout();
             this.tPgTen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -193,6 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tab
@@ -1210,6 +1212,7 @@
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu đơn hàng";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -1566,11 +1569,21 @@
             this.lblTienNuoc.Size = new System.Drawing.Size(0, 25);
             this.lblTienNuoc.TabIndex = 29;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1348, 271);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 30;
+            // 
             // FrmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 789);
+            this.ClientSize = new System.Drawing.Size(1625, 789);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblTienNuoc);
             this.Controls.Add(this.lblTienVoBanh);
             this.Controls.Add(this.lblTienSize);
@@ -1657,6 +1670,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1778,5 +1792,6 @@
         private System.Windows.Forms.Label lblTienSize;
         private System.Windows.Forms.Label lblTienPhu;
         private System.Windows.Forms.Label lblTienTenBanh;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

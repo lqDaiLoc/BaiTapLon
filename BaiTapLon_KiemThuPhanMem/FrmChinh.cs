@@ -24,6 +24,7 @@ namespace BaiTapLon_KiemThuPhanMem
         double tienSize = 1;
         double tienTpPhu = 0;
         double tongTien = 0;
+        DataTable tb = new DataTable();
         BUS_ChucNang bus = new BUS_ChucNang();
 
         private void FrmChinh_Load(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace BaiTapLon_KiemThuPhanMem
             }
         }
         
+        //Chon Ten Banh
         private void CheckedChange_radTenBanh(object sender, EventArgs e)
         {
             
@@ -52,11 +54,11 @@ namespace BaiTapLon_KiemThuPhanMem
             if (rad.Checked)
             {
                 tienLoaiPizza = bus.getTienHang(rad.Text);
-                //tienLoaiPizza = 99000;
+                bus.GetDataRowHang(tb, rad.Text);
             }
             lblTienTenBanh.Text = tienLoaiPizza.ToString();
         }
-
+        //Chon Size
         private void CheckedChange_radSize(object sender, EventArgs e)
         {
             RadioButton rad = sender as RadioButton;
@@ -64,6 +66,7 @@ namespace BaiTapLon_KiemThuPhanMem
             if (rad.Checked)
             {
                 tienSize = bus.getTienHang(rad.Text);
+                bus.GetDataRowHang(tb, rad.Text);
                 lblTienSize.Text = "x" + tienSize.ToString();
                 
 
@@ -290,12 +293,14 @@ namespace BaiTapLon_KiemThuPhanMem
             {
                 if (listView1.Items[i].Selected)
                 {
-                    listView1.Items[i].Remove();
-                    
+                    listView1.Items[i].Remove();                    
                 }
             }
         }
 
-       
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = tb;
+        }
     }
 }
