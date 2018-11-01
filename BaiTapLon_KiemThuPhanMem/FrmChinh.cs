@@ -250,8 +250,9 @@ namespace BaiTapLon_KiemThuPhanMem
                 pizza.SubItems.Add(tongTien.ToString());
                 listView1.Items.Add(pizza);
                 tbtmp = tb;
-                dataGridView1.DataSource = tbtmp;
+                //dataGridView1.DataSourceChanged += tbtmp;
                 dataGridView2.DataSource = tbtmp;
+
                 
                 
                 //----------------------------------------------------------------------------------------------------------
@@ -274,6 +275,7 @@ namespace BaiTapLon_KiemThuPhanMem
                 // label tien
                 lblTienNuoc.Text = lblTienPhu.Text = lblTienSize.Text = lblTienTenBanh.Text = lblTienVoBanh.Text = "";
                 //----------------------------------------------------------------------------------------------------------
+                return;
             }
             else
             {
