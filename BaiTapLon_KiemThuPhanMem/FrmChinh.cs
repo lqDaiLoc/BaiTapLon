@@ -65,8 +65,6 @@ namespace BaiTapLon_KiemThuPhanMem
             {
                 tienSize = bus.getTienHang(rad.Text);
                 lblTienSize.Text = "x" + tienSize.ToString();
-                
-
             }
         }
 
@@ -78,94 +76,89 @@ namespace BaiTapLon_KiemThuPhanMem
                 if (!char.IsDigit(arr[i]))
                     return false;
             return true;
-            
         }
 
         private void TextChanged_ThucUong(object sender, EventArgs e)
         {
             TextBox txt = sender as TextBox;
-            
             if (!isNumber(txt.Text))
                 errorProvider1.SetError(txt, "Phải nhập số");
             else
                 errorProvider1.Clear();
             if (String.IsNullOrWhiteSpace(txt.Text))
                 txt.Text = "0";
-                        
-            
         }
 
-        
         //Chon nước uống
         private void btnChonNuoc_Click(object sender, EventArgs e)
         {
             lblThucUong.Text = "";
             tienNuoc = 0;
-            int slCoCa = int.Parse(txtSoLuongCoCa.Text);
-            txtSoLuongCoCa.Text = slCoCa.ToString();
+            int slCoCa = int.Parse(txtSLCokes.Text);
+            txtSLCokes.Text = slCoCa.ToString();
             if (slCoCa != 0)
             {
                 lblThucUong.Text += "CoCa (" + slCoCa + ")\n";
                 tienNuoc += (bus.getTienHang("CoCa")) * slCoCa;
             }
-            int slSuprise = int.Parse(txtSoLuongSuprise.Text);
-            txtSoLuongSuprise.Text = slSuprise.ToString();
+            int slSuprise = int.Parse(txtSLSprite.Text);
+            txtSLSprite.Text = slSuprise.ToString();
             if (slSuprise != 0)
             {
                 lblThucUong.Text += "Suprise (" + slSuprise + ")\n";
                 tienNuoc += (bus.getTienHang("Suprise")) * slSuprise;
             }
-            int slNumber1 = int.Parse(txtSoLuongNumberOne.Text);
-            txtSoLuongNumberOne.Text = slNumber1.ToString();
+            int slNumber1 = int.Parse(txtSLNumber1.Text);
+            txtSLNumber1.Text = slNumber1.ToString();
             if (slNumber1 != 0)
             {
                 lblThucUong.Text += "Number One (" + slNumber1 + ")\n";
                 tienNuoc += (bus.getTienHang("Number One")) * slNumber1;
             }
-            int slSuoi = int.Parse(txtSoLuongSuoi.Text);
-            txtSoLuongSuoi.Text = slSuoi.ToString();
+            int slSuoi = int.Parse(txtSLAquafina.Text);
+            txtSLAquafina.Text = slSuoi.ToString();
             if (slSuoi != 0)
             {
                 lblThucUong.Text += "Nước Suối (" + slSuoi + ")\n";
                 tienNuoc += (bus.getTienHang("Nước Suối")) * slSuoi;
             }
-            int slDrThanh = int.Parse(txtSoLuongDrThanh.Text);
-            txtSoLuongDrThanh.Text = slDrThanh.ToString();
+            int slDrThanh = int.Parse(txtSLDrThanh.Text);
+            txtSLDrThanh.Text = slDrThanh.ToString();
             if (slDrThanh != 0)
             { 
                 lblThucUong.Text += "DrThanh (" + slDrThanh + ")\n";
                 tienNuoc += (bus.getTienHang("DrThanh")) * slDrThanh;
             }
-            int slPepsi = int.Parse(txtSoLuongPesi.Text);
-            txtSoLuongPesi.Text = slPepsi.ToString();
+            int slPepsi = int.Parse(txtSLPepsi.Text);
+            txtSLPepsi.Text = slPepsi.ToString();
             if (slPepsi != 0)
             {
                 lblThucUong.Text += "Pepsi (" + slPepsi + ")\n";
                 tienNuoc += (bus.getTienHang("Pepsi")) * slPepsi;
             }
-            int slCam = int.Parse(txtSoLuongCam.Text);
-            txtSoLuongCam.Text = slCam.ToString();
+            int slCam = int.Parse(txtSLTwister.Text);
+            txtSLTwister.Text = slCam.ToString();
             if (slCam != 0)
             {
                 lblThucUong.Text += "Cam (" + slCam + ")\n";
                 tienNuoc += (bus.getTienHang("Cam")) * slCam;
             }
-            int slBiDao = int.Parse(txtSoLuongBiDao.Text);
-            txtSoLuongBiDao.Text = slBiDao.ToString();
+            int slBiDao = int.Parse(txtSLWonderfarm.Text);
+            txtSLWonderfarm.Text = slBiDao.ToString();
             if (slBiDao != 0)
             {
                 lblThucUong.Text += "Bí Đao (" + slBiDao + ")\n";
                 tienNuoc += (bus.getTienHang("Bí Đao")) * slBiDao;
             }
-            int slSting = int.Parse(txtSoLuongSting.Text);
-            txtSoLuongSting.Text = slSting.ToString();
+            int slSting = int.Parse(txtSLSting.Text);
+            txtSLSting.Text = slSting.ToString();
             if (slSting != 0)
             {
                 lblThucUong.Text += "Sting (" + slSting + ")\n";
                 tienNuoc += (bus.getTienHang("Sting")) * slSting;
             }
-            int slSoda = int.Parse(txtSoLuongSoda.Text);
-            txtSoLuongSoda.Text = slSoda.ToString();
+            int slSoda = int.Parse(txtSLSoda.Text);
+            txtSLSoda.Text = slSoda.ToString();
             if (slSoda != 0)
             {
                 lblThucUong.Text += "SoDa (" + slSoda + ")\n";
@@ -243,8 +236,8 @@ namespace BaiTapLon_KiemThuPhanMem
                 // Ten Banh
                 radHaiSan.Checked = radXucXich.Checked = radThapCam.Checked = radTom.Checked = radRau.Checked = false;
                 // Thuc Uong
-                txtSoLuongBiDao.Text = txtSoLuongCam.Text = txtSoLuongCoCa.Text = txtSoLuongDrThanh.Text = txtSoLuongNumberOne.Text = "0";
-                txtSoLuongPesi.Text = txtSoLuongSoda.Text = txtSoLuongSting.Text = txtSoLuongSuoi.Text = txtSoLuongSuprise.Text = "0";
+                txtSLWonderfarm.Text = txtSLTwister.Text = txtSLCokes.Text = txtSLDrThanh.Text = txtSLNumber1.Text = "0";
+                txtSLPepsi.Text = txtSLSoda.Text = txtSLSting.Text = txtSLAquafina.Text = txtSLSprite.Text = "0";
                 // cac label 
                 lblVienBanh.Text = lblDeBanh.Text = lblSize.Text = lblTenBanh.Text = lblThucUong.Text = lblTpPhu.Text = "";
 

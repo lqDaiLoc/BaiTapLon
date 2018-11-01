@@ -17,7 +17,7 @@ namespace BUS
         {
             double kq = 0;
             DataProvider dp = new DataProvider();
-            dp.ConnecTion();
+            dp.Connection();
             DataTable tb_Banh = dp.GetDataTableHang();
             try
             {   
@@ -29,20 +29,18 @@ namespace BUS
                         return kq;
                     }
                 }
-                dp.DisConnecTion();
+                dp.DisConnection();
                 return kq;
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Tên Bánh Sai...", "error getTienBanh");
+                MessageBox.Show("Tên bánh sai...", "Error getTienBanh");
                 throw ex;
             }
             finally
             {
-                dp.DisConnecTion();
-                
+                dp.DisConnection();   
             }
-
         }
 
         //
@@ -52,29 +50,29 @@ namespace BUS
         {
             double size;
             DataProvider dp = new DataProvider();
-            dp.ConnecTion();
+            dp.Connection();
 
             string sql = "Select SoLuongCon FROM Hang WHERE TenHang = 'Nhỏ'";
             SqlCommand cmd = new SqlCommand(sql);
-            cmd.Connection = dp.cnn;
+            cmd.Connection = dp.cn;
             cmd.CommandText = sql;
             cmd.CommandType = CommandType.Text;
             try
             {
                 string s = cmd.ExecuteScalar().ToString();
                 size = double.Parse(s);
-                dp.DisConnecTion();
+                dp.DisConnection();
                 return size;
                
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Sai Size...", "error getSizeBanh");
+                MessageBox.Show("Sai size...", "Error getSizeBanh");
                 throw ex;
             }
             finally
             {
-                dp.DisConnecTion();
+                dp.DisConnection();
             }
         }
     }

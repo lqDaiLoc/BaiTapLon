@@ -93,25 +93,25 @@
             this.tPgThucUong = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnChonNuoc = new System.Windows.Forms.Button();
-            this.txtSoLuongSoda = new System.Windows.Forms.TextBox();
+            this.txtSLSoda = new System.Windows.Forms.TextBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.txtSoLuongSting = new System.Windows.Forms.TextBox();
+            this.txtSLSting = new System.Windows.Forms.TextBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.txtSoLuongBiDao = new System.Windows.Forms.TextBox();
+            this.txtSLWonderfarm = new System.Windows.Forms.TextBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.txtSoLuongCam = new System.Windows.Forms.TextBox();
+            this.txtSLTwister = new System.Windows.Forms.TextBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.txtSoLuongPesi = new System.Windows.Forms.TextBox();
+            this.txtSLPepsi = new System.Windows.Forms.TextBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.txtSoLuongDrThanh = new System.Windows.Forms.TextBox();
-            this.txtSoLuongSuoi = new System.Windows.Forms.TextBox();
-            this.txtSoLuongNumberOne = new System.Windows.Forms.TextBox();
-            this.txtSoLuongSuprise = new System.Windows.Forms.TextBox();
+            this.txtSLDrThanh = new System.Windows.Forms.TextBox();
+            this.txtSLAquafina = new System.Windows.Forms.TextBox();
+            this.txtSLNumber1 = new System.Windows.Forms.TextBox();
+            this.txtSLSprite = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtSoLuongCoCa = new System.Windows.Forms.TextBox();
+            this.txtSLCokes = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -202,7 +202,7 @@
             this.tab.Controls.Add(this.tPgSize);
             this.tab.Controls.Add(this.tPgVoBanh);
             this.tab.Controls.Add(this.tPgThucUong);
-            this.tab.Location = new System.Drawing.Point(336, 406);
+            this.tab.Location = new System.Drawing.Point(336, 405);
             this.tab.Margin = new System.Windows.Forms.Padding(5);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
@@ -699,15 +699,15 @@
             this.panel2.Controls.Add(this.radLon);
             this.panel2.Controls.Add(this.radThuong);
             this.panel2.Controls.Add(this.radNho);
-            this.panel2.Location = new System.Drawing.Point(52, 202);
+            this.panel2.Location = new System.Drawing.Point(8, 202);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(684, 100);
+            this.panel2.Size = new System.Drawing.Size(927, 100);
             this.panel2.TabIndex = 3;
             // 
             // radLon
             // 
             this.radLon.AutoSize = true;
-            this.radLon.Location = new System.Drawing.Point(576, 38);
+            this.radLon.Location = new System.Drawing.Point(770, 38);
             this.radLon.Margin = new System.Windows.Forms.Padding(4);
             this.radLon.Name = "radLon";
             this.radLon.Size = new System.Drawing.Size(58, 24);
@@ -720,13 +720,13 @@
             // radThuong
             // 
             this.radThuong.AutoSize = true;
-            this.radThuong.Location = new System.Drawing.Point(304, 38);
+            this.radThuong.Location = new System.Drawing.Point(390, 38);
             this.radThuong.Margin = new System.Windows.Forms.Padding(4);
             this.radThuong.Name = "radThuong";
-            this.radThuong.Size = new System.Drawing.Size(85, 24);
+            this.radThuong.Size = new System.Drawing.Size(59, 24);
             this.radThuong.TabIndex = 4;
             this.radThuong.TabStop = true;
-            this.radThuong.Text = "Thường";
+            this.radThuong.Text = "Vừa";
             this.radThuong.UseVisualStyleBackColor = true;
             this.radThuong.CheckedChanged += new System.EventHandler(this.CheckedChange_radSize);
             // 
@@ -747,7 +747,7 @@
             // 
             this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(564, 34);
+            this.pictureBox8.Location = new System.Drawing.Point(778, 29);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(156, 151);
@@ -758,7 +758,7 @@
             // 
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(305, 60);
+            this.pictureBox7.Location = new System.Drawing.Point(398, 55);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(135, 125);
@@ -769,7 +769,7 @@
             // 
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(52, 82);
+            this.pictureBox6.Location = new System.Drawing.Point(59, 93);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(121, 102);
@@ -830,10 +830,10 @@
             this.radDeBanh_Vua.Location = new System.Drawing.Point(80, 200);
             this.radDeBanh_Vua.Margin = new System.Windows.Forms.Padding(4);
             this.radDeBanh_Vua.Name = "radDeBanh_Vua";
-            this.radDeBanh_Vua.Size = new System.Drawing.Size(90, 24);
+            this.radDeBanh_Vua.Size = new System.Drawing.Size(85, 24);
             this.radDeBanh_Vua.TabIndex = 5;
             this.radDeBanh_Vua.TabStop = true;
-            this.radDeBanh_Vua.Text = "Đế  Vừa";
+            this.radDeBanh_Vua.Text = "Đế Vừa";
             this.radDeBanh_Vua.UseVisualStyleBackColor = true;
             this.radDeBanh_Vua.CheckedChanged += new System.EventHandler(this.CheckedChang_DeBanh);
             // 
@@ -933,25 +933,25 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.Controls.Add(this.btnChonNuoc);
-            this.panel3.Controls.Add(this.txtSoLuongSoda);
+            this.panel3.Controls.Add(this.txtSLSoda);
             this.panel3.Controls.Add(this.pictureBox19);
-            this.panel3.Controls.Add(this.txtSoLuongSting);
+            this.panel3.Controls.Add(this.txtSLSting);
             this.panel3.Controls.Add(this.pictureBox17);
-            this.panel3.Controls.Add(this.txtSoLuongBiDao);
+            this.panel3.Controls.Add(this.txtSLWonderfarm);
             this.panel3.Controls.Add(this.pictureBox18);
-            this.panel3.Controls.Add(this.txtSoLuongCam);
+            this.panel3.Controls.Add(this.txtSLTwister);
             this.panel3.Controls.Add(this.pictureBox16);
-            this.panel3.Controls.Add(this.txtSoLuongPesi);
+            this.panel3.Controls.Add(this.txtSLPepsi);
             this.panel3.Controls.Add(this.pictureBox15);
-            this.panel3.Controls.Add(this.txtSoLuongDrThanh);
-            this.panel3.Controls.Add(this.txtSoLuongSuoi);
-            this.panel3.Controls.Add(this.txtSoLuongNumberOne);
-            this.panel3.Controls.Add(this.txtSoLuongSuprise);
+            this.panel3.Controls.Add(this.txtSLDrThanh);
+            this.panel3.Controls.Add(this.txtSLAquafina);
+            this.panel3.Controls.Add(this.txtSLNumber1);
+            this.panel3.Controls.Add(this.txtSLSprite);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.txtSoLuongCoCa);
+            this.panel3.Controls.Add(this.txtSLCokes);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -968,17 +968,17 @@
             this.btnChonNuoc.UseVisualStyleBackColor = true;
             this.btnChonNuoc.Click += new System.EventHandler(this.btnChonNuoc_Click);
             // 
-            // txtSoLuongSoda
+            // txtSLSoda
             // 
-            this.txtSoLuongSoda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongSoda.Location = new System.Drawing.Point(770, 376);
-            this.txtSoLuongSoda.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongSoda.Name = "txtSoLuongSoda";
-            this.txtSoLuongSoda.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongSoda.TabIndex = 37;
-            this.txtSoLuongSoda.Text = "0";
-            this.txtSoLuongSoda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSoda.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLSoda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLSoda.Location = new System.Drawing.Point(770, 376);
+            this.txtSLSoda.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLSoda.Name = "txtSLSoda";
+            this.txtSLSoda.Size = new System.Drawing.Size(121, 27);
+            this.txtSLSoda.TabIndex = 37;
+            this.txtSLSoda.Text = "0";
+            this.txtSLSoda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLSoda.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox19
             // 
@@ -991,17 +991,17 @@
             this.pictureBox19.TabIndex = 36;
             this.pictureBox19.TabStop = false;
             // 
-            // txtSoLuongSting
+            // txtSLSting
             // 
-            this.txtSoLuongSting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongSting.Location = new System.Drawing.Point(601, 376);
-            this.txtSoLuongSting.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongSting.Name = "txtSoLuongSting";
-            this.txtSoLuongSting.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongSting.TabIndex = 35;
-            this.txtSoLuongSting.Text = "0";
-            this.txtSoLuongSting.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSting.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLSting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLSting.Location = new System.Drawing.Point(601, 376);
+            this.txtSLSting.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLSting.Name = "txtSLSting";
+            this.txtSLSting.Size = new System.Drawing.Size(121, 27);
+            this.txtSLSting.TabIndex = 35;
+            this.txtSLSting.Text = "0";
+            this.txtSLSting.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLSting.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox17
             // 
@@ -1014,17 +1014,17 @@
             this.pictureBox17.TabIndex = 34;
             this.pictureBox17.TabStop = false;
             // 
-            // txtSoLuongBiDao
+            // txtSLWonderfarm
             // 
-            this.txtSoLuongBiDao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongBiDao.Location = new System.Drawing.Point(428, 376);
-            this.txtSoLuongBiDao.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongBiDao.Name = "txtSoLuongBiDao";
-            this.txtSoLuongBiDao.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongBiDao.TabIndex = 33;
-            this.txtSoLuongBiDao.Text = "0";
-            this.txtSoLuongBiDao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongBiDao.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLWonderfarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLWonderfarm.Location = new System.Drawing.Point(428, 376);
+            this.txtSLWonderfarm.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLWonderfarm.Name = "txtSLWonderfarm";
+            this.txtSLWonderfarm.Size = new System.Drawing.Size(121, 27);
+            this.txtSLWonderfarm.TabIndex = 33;
+            this.txtSLWonderfarm.Text = "0";
+            this.txtSLWonderfarm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLWonderfarm.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox18
             // 
@@ -1037,17 +1037,17 @@
             this.pictureBox18.TabIndex = 32;
             this.pictureBox18.TabStop = false;
             // 
-            // txtSoLuongCam
+            // txtSLTwister
             // 
-            this.txtSoLuongCam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongCam.Location = new System.Drawing.Point(259, 376);
-            this.txtSoLuongCam.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongCam.Name = "txtSoLuongCam";
-            this.txtSoLuongCam.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongCam.TabIndex = 31;
-            this.txtSoLuongCam.Text = "0";
-            this.txtSoLuongCam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongCam.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLTwister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLTwister.Location = new System.Drawing.Point(259, 376);
+            this.txtSLTwister.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLTwister.Name = "txtSLTwister";
+            this.txtSLTwister.Size = new System.Drawing.Size(121, 27);
+            this.txtSLTwister.TabIndex = 31;
+            this.txtSLTwister.Text = "0";
+            this.txtSLTwister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLTwister.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox16
             // 
@@ -1060,17 +1060,17 @@
             this.pictureBox16.TabIndex = 30;
             this.pictureBox16.TabStop = false;
             // 
-            // txtSoLuongPesi
+            // txtSLPepsi
             // 
-            this.txtSoLuongPesi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongPesi.Location = new System.Drawing.Point(101, 376);
-            this.txtSoLuongPesi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongPesi.Name = "txtSoLuongPesi";
-            this.txtSoLuongPesi.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongPesi.TabIndex = 29;
-            this.txtSoLuongPesi.Text = "0";
-            this.txtSoLuongPesi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongPesi.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLPepsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLPepsi.Location = new System.Drawing.Point(101, 376);
+            this.txtSLPepsi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLPepsi.Name = "txtSLPepsi";
+            this.txtSLPepsi.Size = new System.Drawing.Size(121, 27);
+            this.txtSLPepsi.TabIndex = 29;
+            this.txtSLPepsi.Text = "0";
+            this.txtSLPepsi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLPepsi.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox15
             // 
@@ -1084,53 +1084,53 @@
             this.pictureBox15.TabIndex = 28;
             this.pictureBox15.TabStop = false;
             // 
-            // txtSoLuongDrThanh
+            // txtSLDrThanh
             // 
-            this.txtSoLuongDrThanh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongDrThanh.Location = new System.Drawing.Point(770, 156);
-            this.txtSoLuongDrThanh.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongDrThanh.Name = "txtSoLuongDrThanh";
-            this.txtSoLuongDrThanh.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongDrThanh.TabIndex = 27;
-            this.txtSoLuongDrThanh.Text = "0";
-            this.txtSoLuongDrThanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongDrThanh.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLDrThanh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLDrThanh.Location = new System.Drawing.Point(770, 156);
+            this.txtSLDrThanh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLDrThanh.Name = "txtSLDrThanh";
+            this.txtSLDrThanh.Size = new System.Drawing.Size(121, 27);
+            this.txtSLDrThanh.TabIndex = 27;
+            this.txtSLDrThanh.Text = "0";
+            this.txtSLDrThanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLDrThanh.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
-            // txtSoLuongSuoi
+            // txtSLAquafina
             // 
-            this.txtSoLuongSuoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongSuoi.Location = new System.Drawing.Point(601, 156);
-            this.txtSoLuongSuoi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongSuoi.Name = "txtSoLuongSuoi";
-            this.txtSoLuongSuoi.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongSuoi.TabIndex = 26;
-            this.txtSoLuongSuoi.Text = "0";
-            this.txtSoLuongSuoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSuoi.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLAquafina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLAquafina.Location = new System.Drawing.Point(601, 156);
+            this.txtSLAquafina.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLAquafina.Name = "txtSLAquafina";
+            this.txtSLAquafina.Size = new System.Drawing.Size(121, 27);
+            this.txtSLAquafina.TabIndex = 26;
+            this.txtSLAquafina.Text = "0";
+            this.txtSLAquafina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLAquafina.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
-            // txtSoLuongNumberOne
+            // txtSLNumber1
             // 
-            this.txtSoLuongNumberOne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongNumberOne.Location = new System.Drawing.Point(428, 156);
-            this.txtSoLuongNumberOne.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongNumberOne.Name = "txtSoLuongNumberOne";
-            this.txtSoLuongNumberOne.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongNumberOne.TabIndex = 25;
-            this.txtSoLuongNumberOne.Text = "0";
-            this.txtSoLuongNumberOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongNumberOne.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLNumber1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLNumber1.Location = new System.Drawing.Point(428, 156);
+            this.txtSLNumber1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLNumber1.Name = "txtSLNumber1";
+            this.txtSLNumber1.Size = new System.Drawing.Size(121, 27);
+            this.txtSLNumber1.TabIndex = 25;
+            this.txtSLNumber1.Text = "0";
+            this.txtSLNumber1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLNumber1.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
-            // txtSoLuongSuprise
+            // txtSLSprite
             // 
-            this.txtSoLuongSuprise.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongSuprise.Location = new System.Drawing.Point(259, 156);
-            this.txtSoLuongSuprise.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongSuprise.Name = "txtSoLuongSuprise";
-            this.txtSoLuongSuprise.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongSuprise.TabIndex = 24;
-            this.txtSoLuongSuprise.Text = "0";
-            this.txtSoLuongSuprise.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongSuprise.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLSprite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLSprite.Location = new System.Drawing.Point(259, 156);
+            this.txtSLSprite.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLSprite.Name = "txtSLSprite";
+            this.txtSLSprite.Size = new System.Drawing.Size(121, 27);
+            this.txtSLSprite.TabIndex = 24;
+            this.txtSLSprite.Text = "0";
+            this.txtSLSprite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLSprite.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox5
             // 
@@ -1176,17 +1176,17 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
-            // txtSoLuongCoCa
+            // txtSLCokes
             // 
-            this.txtSoLuongCoCa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuongCoCa.Location = new System.Drawing.Point(101, 156);
-            this.txtSoLuongCoCa.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoLuongCoCa.Name = "txtSoLuongCoCa";
-            this.txtSoLuongCoCa.Size = new System.Drawing.Size(121, 27);
-            this.txtSoLuongCoCa.TabIndex = 19;
-            this.txtSoLuongCoCa.Text = "0";
-            this.txtSoLuongCoCa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuongCoCa.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
+            this.txtSLCokes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSLCokes.Location = new System.Drawing.Point(101, 156);
+            this.txtSLCokes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSLCokes.Name = "txtSLCokes";
+            this.txtSLCokes.Size = new System.Drawing.Size(121, 27);
+            this.txtSLCokes.TabIndex = 19;
+            this.txtSLCokes.Text = "0";
+            this.txtSLCokes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSLCokes.TextChanged += new System.EventHandler(this.TextChanged_ThucUong);
             // 
             // pictureBox1
             // 
@@ -1425,7 +1425,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 20);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Loại Võ Bánh";
+            this.label9.Text = "Loại Vỏ Bánh";
             // 
             // lblThucUong
             // 
@@ -1458,7 +1458,7 @@
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(139, 69);
             this.btnSubmit.TabIndex = 21;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "Confirm";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -1716,25 +1716,25 @@
         private System.Windows.Forms.RadioButton radThuong;
         private System.Windows.Forms.RadioButton radNho;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtSoLuongSoda;
+        private System.Windows.Forms.TextBox txtSLSoda;
         private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.TextBox txtSoLuongSting;
+        private System.Windows.Forms.TextBox txtSLSting;
         private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.TextBox txtSoLuongBiDao;
+        private System.Windows.Forms.TextBox txtSLWonderfarm;
         private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.TextBox txtSoLuongCam;
+        private System.Windows.Forms.TextBox txtSLTwister;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.TextBox txtSoLuongPesi;
+        private System.Windows.Forms.TextBox txtSLPepsi;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.TextBox txtSoLuongDrThanh;
-        private System.Windows.Forms.TextBox txtSoLuongSuoi;
-        private System.Windows.Forms.TextBox txtSoLuongNumberOne;
-        private System.Windows.Forms.TextBox txtSoLuongSuprise;
+        private System.Windows.Forms.TextBox txtSLDrThanh;
+        private System.Windows.Forms.TextBox txtSLAquafina;
+        private System.Windows.Forms.TextBox txtSLNumber1;
+        private System.Windows.Forms.TextBox txtSLSprite;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtSoLuongCoCa;
+        private System.Windows.Forms.TextBox txtSLCokes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnChonNuoc;

@@ -24,7 +24,7 @@ namespace BaiTapLon_KiemThuPhanMem
         {
             if (string.IsNullOrWhiteSpace(txtDangNhap.Text) || string.IsNullOrWhiteSpace(txtMatKhau.Text))
             {
-                MessageBox.Show("chưa điền tên đăng nhập or mật khẩu", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chưa điền tên đăng nhập hoặc mật khẩu", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDangNhap.Text = txtMatKhau.Text = "";
                 txtDangNhap.Focus();
             }
@@ -40,7 +40,7 @@ namespace BaiTapLon_KiemThuPhanMem
                 else
                 {
                     // nếu sai mật khẩu
-                    DialogResult result = MessageBox.Show("sai mật khẩu", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show("Sai mật khẩu", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                     if (result == DialogResult.Cancel)
                         Application.Exit();
                     else

@@ -19,10 +19,10 @@ namespace BUS
         public bool Login(string userName, string passWord)
         {
             DataProvider dp = new DataProvider();
-            dp.ConnecTion();
+            dp.Connection();
             string sqlStr = "SELECT ChucVu FROM NhanVien WHERE MaNV = N'" + userName + "' AND Ten = N'" + passWord + "'";
             SqlCommand cmd = new SqlCommand(sqlStr);
-            cmd.Connection = dp.cnn;
+            cmd.Connection = dp.cn;
             cmd.CommandText = sqlStr;
             cmd.CommandType = CommandType.Text;
 
@@ -30,19 +30,19 @@ namespace BUS
             {
                 chucVu = cmd.ExecuteScalar().ToString();
 
-                dp.DisConnecTion();
+                dp.DisConnection();
                 if (chucVu != null)
                     return true;
                 return false;
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Ko lay duoc du lieu", " error ");
+                MessageBox.Show("Không lấy được dữ liệu", "Error");
                 throw ex;
             }
             finally
             {
-                dp.DisConnecTion();
+                dp.DisConnection();
             }
         }
 
