@@ -46,15 +46,40 @@ namespace BUS
         }
 
         //Lay Thong tin hang
-        public void GetDataRowHang(DataTable tb ,string tenHang)
+        public void GetDataRowHang(DataTable tb, string tenHang)
         {
             DataRow row = tb.NewRow();
             DataProvider dp = new DataProvider();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select * from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
+            SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, SoLuong = 1, GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
             adapter.Fill(tb);
 
         }
-        
+        public void RemoveGetDataRowHang(DataTable tb, string tenHang)
+        {
+            
+            
+            foreach(DataRow ros in tb.Rows)
+            {
+                if (ros["TenHang"].ToString() == tenHang)
+                {
+                    tb.Rows.Remove(ros);
+                    return;    
+                }
+            }
+            //DataRow row = tb.NewRow();
+            //DataProvider dp = new DataProvider();
+            //SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, SoLuong = 1, GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
+            //adapter.Fill(tb);
+
+        }
+        public void GetDataRowNuoc(DataTable tb, string tenHang, int SoLuong)
+        {
+            DataRow row = tb.NewRow();
+            DataProvider dp = new DataProvider();
+            SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, SoLuong = '" + SoLuong.ToString() + "' , GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
+            adapter.Fill(tb);
+        }
+
         // lay size banh
         public double getSizeBanh(string SizeBanh)
         {

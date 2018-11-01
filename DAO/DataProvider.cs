@@ -16,6 +16,7 @@ namespace DAO
             string cnnStr = "Data Source=LAPTOP-RJRD8U96;Initial Catalog=QLBanPizza;Integrated Security=True";
             cnn = new SqlConnection(cnnStr);
         }
+//---------------------------------------------------------------------------------------------------------------
         public DataSet GetDataSet()
         {
             // tao dataSet 
@@ -46,7 +47,7 @@ namespace DAO
             
             return data;            
         }
-
+//---------------------------------------------------------------------------------------------------------------
         // lay table Banh
         public DataTable GetDataTableBanh()
         {
@@ -54,7 +55,6 @@ namespace DAO
             DataTable tb = data.Tables["Banh"];
             return tb;
         }
-        
         // lay table DonHang
         public DataTable GetDataTableDonHang()
         {
@@ -111,7 +111,7 @@ namespace DAO
             DataTable tb = data.Tables["Users"];
             return tb;
         }
-
+//---------------------------------------------------------------------------------------------------------------
         // update
         // update Table Banh
         public void updateTableBanh(DataTable tb)
@@ -134,7 +134,7 @@ namespace DAO
             SqlCommandBuilder scb = new SqlCommandBuilder(da);
             da.Update(tb);
         }
-
+//---------------------------------------------------------------------------------------------------------------
         // ConnecTion
         public void ConnecTion()
         {
@@ -152,7 +152,7 @@ namespace DAO
         {
             cnn.Close();
         }
-
+//---------------------------------------------------------------------------------------------------------------
     }
 
 }
