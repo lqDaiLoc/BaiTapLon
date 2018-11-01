@@ -45,24 +45,26 @@ namespace BaiTapLon_KiemThuPhanMem
                 } 
             }
         }
-        
+        //--------------------------------------------------------------------------------------------------------------------------------------
         //Chon Ten Banh
+        public string tenBanh;
         private void CheckedChange_radTenBanh(object sender, EventArgs e)
         {
             
             RadioButton rad = sender as RadioButton;
-            lblTenBanh.Text = rad.Text;
-            if (rad.Checked)
-            {
-                tienLoaiPizza = bus.getTienHang(rad.Text);
-                bus.GetDataRowHang(tb, rad.Text);
-            }
-            else
-            {
-                bus.RemoveGetDataRowHang(tb,rad.Text);
-            }
+            tenBanh = rad.Text;
+            
+        }
+        
+        private void btnChonBanh_Click(object sender, EventArgs e)
+        {
+            lblTenBanh.Text = tenBanh;
+            tienLoaiPizza = bus.getTienHang(tenBanh);
+            bus.GetDataRowHang(tb, tenBanh);
+            bus.RemoveGetDataRowHang(tb, tenBanh);
             lblTienTenBanh.Text = tienLoaiPizza.ToString();
         }
+        //--------------------------------------------------------------------------------------------------------------------------------------
         //Chon Size
         private void CheckedChange_radSize(object sender, EventArgs e)
         {
@@ -77,6 +79,7 @@ namespace BaiTapLon_KiemThuPhanMem
 
             }
         }
+//--------------------------------------------------------------------------------------------------------------------------------------
         //Chon nước uống
         private void btnChonNuoc_Click(object sender, EventArgs e)
         {
@@ -166,6 +169,7 @@ namespace BaiTapLon_KiemThuPhanMem
             tongTien += tienNuoc;
 
         }
+//--------------------------------------------------------------------------------------------------------------------------------------
         // CHon tp Phu
         private void CheckedChanged_TpPhu(object sender, EventArgs e)
         {
@@ -184,6 +188,7 @@ namespace BaiTapLon_KiemThuPhanMem
             }
             lblTienPhu.Text = tienTpPhu.ToString();
         }
+//--------------------------------------------------------------------------------------------------------------------------------------
         // Chon De Banh
         private void CheckedChang_DeBanh(object sender, EventArgs e)
         {
@@ -196,6 +201,7 @@ namespace BaiTapLon_KiemThuPhanMem
                 lblDeBanh.Text = "";
 
         }
+//--------------------------------------------------------------------------------------------------------------------------------------
         // Chon Vien Banh
         private void CheckedChang_VienBanh(object sender, EventArgs e)
         {
@@ -208,7 +214,7 @@ namespace BaiTapLon_KiemThuPhanMem
 
             lblTienVoBanh.Text = tienVoBanh.ToString();
         }
-
+//--------------------------------------------------------------------------------------------------------------------------------------
         private bool isNumber(string s)
         {
             char[] arr;
@@ -323,5 +329,7 @@ namespace BaiTapLon_KiemThuPhanMem
 
             dataGridView1.DataSource = tbtmp;
         }
+
+        
     }
 }

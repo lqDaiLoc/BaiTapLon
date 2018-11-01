@@ -149,6 +149,9 @@
             this.lblTienNuoc = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnChonBanh = new System.Windows.Forms.Button();
+            this.btnChonSize = new System.Windows.Forms.Button();
+            this.btnChonVien_De = new System.Windows.Forms.Button();
             this.tab.SuspendLayout();
             this.tPgTen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -279,6 +282,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnChonBanh);
             this.panel1.Controls.Add(this.radRau);
             this.panel1.Controls.Add(this.radTom);
             this.panel1.Controls.Add(this.radThapCam);
@@ -685,6 +689,7 @@
             // 
             // tPgSize
             // 
+            this.tPgSize.Controls.Add(this.btnChonSize);
             this.tPgSize.Controls.Add(this.panel2);
             this.tPgSize.Controls.Add(this.pictureBox8);
             this.tPgSize.Controls.Add(this.pictureBox7);
@@ -806,6 +811,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnChonVien_De);
             this.splitContainer1.Panel2.Controls.Add(this.radioButton2);
             this.splitContainer1.Panel2.Controls.Add(this.radioButton1);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox32);
@@ -867,7 +873,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(397, 262);
+            this.radioButton2.Location = new System.Drawing.Point(397, 249);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(129, 24);
@@ -880,7 +886,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(111, 262);
+            this.radioButton1.Location = new System.Drawing.Point(111, 249);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(135, 24);
@@ -893,7 +899,7 @@
             // pictureBox32
             // 
             this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.Location = new System.Drawing.Point(380, 117);
+            this.pictureBox32.Location = new System.Drawing.Point(380, 104);
             this.pictureBox32.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(146, 129);
@@ -904,7 +910,7 @@
             // pictureBox31
             // 
             this.pictureBox31.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox31.Image")));
-            this.pictureBox31.Location = new System.Drawing.Point(100, 117);
+            this.pictureBox31.Location = new System.Drawing.Point(100, 104);
             this.pictureBox31.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(146, 129);
@@ -916,7 +922,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(174, 39);
+            this.label8.Location = new System.Drawing.Point(174, 26);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(221, 51);
             this.label8.TabIndex = 7;
@@ -1589,6 +1595,34 @@
             this.dataGridView2.Size = new System.Drawing.Size(318, 150);
             this.dataGridView2.TabIndex = 31;
             // 
+            // btnChonBanh
+            // 
+            this.btnChonBanh.Location = new System.Drawing.Point(324, 85);
+            this.btnChonBanh.Name = "btnChonBanh";
+            this.btnChonBanh.Size = new System.Drawing.Size(123, 37);
+            this.btnChonBanh.TabIndex = 6;
+            this.btnChonBanh.Text = "OK";
+            this.btnChonBanh.UseVisualStyleBackColor = true;
+            this.btnChonBanh.Click += new System.EventHandler(this.btnChonBanh_Click);
+            // 
+            // btnChonSize
+            // 
+            this.btnChonSize.Location = new System.Drawing.Point(327, 286);
+            this.btnChonSize.Name = "btnChonSize";
+            this.btnChonSize.Size = new System.Drawing.Size(123, 37);
+            this.btnChonSize.TabIndex = 7;
+            this.btnChonSize.Text = "OK";
+            this.btnChonSize.UseVisualStyleBackColor = true;
+            // 
+            // btnChonVien_De
+            // 
+            this.btnChonVien_De.Location = new System.Drawing.Point(246, 294);
+            this.btnChonVien_De.Name = "btnChonVien_De";
+            this.btnChonVien_De.Size = new System.Drawing.Size(132, 37);
+            this.btnChonVien_De.TabIndex = 33;
+            this.btnChonVien_De.Text = "OK";
+            this.btnChonVien_De.UseVisualStyleBackColor = true;
+            // 
             // FrmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -1807,5 +1841,8 @@
         private System.Windows.Forms.Label lblTienTenBanh;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btnChonBanh;
+        private System.Windows.Forms.Button btnChonSize;
+        private System.Windows.Forms.Button btnChonVien_De;
     }
 }
