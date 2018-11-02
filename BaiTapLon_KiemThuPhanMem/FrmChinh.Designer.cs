@@ -40,6 +40,7 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnChonBanh = new System.Windows.Forms.Button();
             this.radRau = new System.Windows.Forms.RadioButton();
             this.radTom = new System.Windows.Forms.RadioButton();
             this.radThapCam = new System.Windows.Forms.RadioButton();
@@ -72,6 +73,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.tPgSize = new System.Windows.Forms.TabPage();
+            this.btnChonSize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radLon = new System.Windows.Forms.RadioButton();
             this.radThuong = new System.Windows.Forms.RadioButton();
@@ -85,6 +87,7 @@
             this.radDeBanh_Vua = new System.Windows.Forms.RadioButton();
             this.radDeBanh_Mong = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnChonVien_De = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
@@ -114,7 +117,6 @@
             this.txtSoLuongCoCa = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXoaBill = new System.Windows.Forms.Button();
             this.btnNhapTTNhanVien = new System.Windows.Forms.Button();
@@ -149,9 +151,6 @@
             this.lblTienNuoc = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnChonBanh = new System.Windows.Forms.Button();
-            this.btnChonSize = new System.Windows.Forms.Button();
-            this.btnChonVien_De = new System.Windows.Forms.Button();
             this.tab.SuspendLayout();
             this.tPgTen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -293,6 +292,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 125);
             this.panel1.TabIndex = 1;
+            // 
+            // btnChonBanh
+            // 
+            this.btnChonBanh.Location = new System.Drawing.Point(324, 85);
+            this.btnChonBanh.Name = "btnChonBanh";
+            this.btnChonBanh.Size = new System.Drawing.Size(123, 37);
+            this.btnChonBanh.TabIndex = 6;
+            this.btnChonBanh.Text = "OK";
+            this.btnChonBanh.UseVisualStyleBackColor = true;
+            this.btnChonBanh.Click += new System.EventHandler(this.btnChonBanh_Click);
             // 
             // radRau
             // 
@@ -703,6 +712,15 @@
             this.tPgSize.Text = "Kích Cỡ Bánh";
             this.tPgSize.UseVisualStyleBackColor = true;
             // 
+            // btnChonSize
+            // 
+            this.btnChonSize.Location = new System.Drawing.Point(327, 286);
+            this.btnChonSize.Name = "btnChonSize";
+            this.btnChonSize.Size = new System.Drawing.Size(123, 37);
+            this.btnChonSize.TabIndex = 7;
+            this.btnChonSize.Text = "OK";
+            this.btnChonSize.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.radLon);
@@ -869,6 +887,15 @@
             this.label1.Size = new System.Drawing.Size(189, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đế Bánh";
+            // 
+            // btnChonVien_De
+            // 
+            this.btnChonVien_De.Location = new System.Drawing.Point(246, 294);
+            this.btnChonVien_De.Name = "btnChonVien_De";
+            this.btnChonVien_De.Size = new System.Drawing.Size(132, 37);
+            this.btnChonVien_De.TabIndex = 33;
+            this.btnChonVien_De.Text = "OK";
+            this.btnChonVien_De.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -1213,7 +1240,7 @@
             // 
             this.btnLuu.BackColor = System.Drawing.Color.Aqua;
             this.btnLuu.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(1149, 190);
+            this.btnLuu.Location = new System.Drawing.Point(1148, 225);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(139, 69);
@@ -1222,27 +1249,14 @@
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.Aqua;
-            this.btnSua.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(1148, 352);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(139, 69);
-            this.btnSua.TabIndex = 4;
-            this.btnSua.Text = "Sửa đơn hàng";
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.Aqua;
             this.btnHuy.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(1149, 274);
+            this.btnHuy.Location = new System.Drawing.Point(1148, 324);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(139, 69);
+            this.btnHuy.Size = new System.Drawing.Size(139, 72);
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy đơn hàng";
             this.btnHuy.UseVisualStyleBackColor = false;
@@ -1251,7 +1265,7 @@
             // 
             this.btnXoaBill.BackColor = System.Drawing.Color.Aqua;
             this.btnXoaBill.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaBill.Location = new System.Drawing.Point(1149, 113);
+            this.btnXoaBill.Location = new System.Drawing.Point(1148, 130);
             this.btnXoaBill.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoaBill.Name = "btnXoaBill";
             this.btnXoaBill.Size = new System.Drawing.Size(139, 69);
@@ -1595,34 +1609,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(318, 150);
             this.dataGridView2.TabIndex = 31;
             // 
-            // btnChonBanh
-            // 
-            this.btnChonBanh.Location = new System.Drawing.Point(324, 85);
-            this.btnChonBanh.Name = "btnChonBanh";
-            this.btnChonBanh.Size = new System.Drawing.Size(123, 37);
-            this.btnChonBanh.TabIndex = 6;
-            this.btnChonBanh.Text = "OK";
-            this.btnChonBanh.UseVisualStyleBackColor = true;
-            this.btnChonBanh.Click += new System.EventHandler(this.btnChonBanh_Click);
-            // 
-            // btnChonSize
-            // 
-            this.btnChonSize.Location = new System.Drawing.Point(327, 286);
-            this.btnChonSize.Name = "btnChonSize";
-            this.btnChonSize.Size = new System.Drawing.Size(123, 37);
-            this.btnChonSize.TabIndex = 7;
-            this.btnChonSize.Text = "OK";
-            this.btnChonSize.UseVisualStyleBackColor = true;
-            // 
-            // btnChonVien_De
-            // 
-            this.btnChonVien_De.Location = new System.Drawing.Point(246, 294);
-            this.btnChonVien_De.Name = "btnChonVien_De";
-            this.btnChonVien_De.Size = new System.Drawing.Size(132, 37);
-            this.btnChonVien_De.TabIndex = 33;
-            this.btnChonVien_De.Text = "OK";
-            this.btnChonVien_De.UseVisualStyleBackColor = true;
-            // 
             // FrmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -1655,7 +1641,6 @@
             this.Controls.Add(this.btnNhapTTNhanVien);
             this.Controls.Add(this.btnXoaBill);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.tab);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1729,7 +1714,6 @@
         private System.Windows.Forms.TabPage tPgThanhPhan;
         private System.Windows.Forms.TabPage tPgSize;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnXoaBill;
         private System.Windows.Forms.Button btnNhapTTNhanVien;

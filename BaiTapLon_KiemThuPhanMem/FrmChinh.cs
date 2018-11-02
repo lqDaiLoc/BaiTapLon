@@ -45,7 +45,7 @@ namespace BaiTapLon_KiemThuPhanMem
                 } 
             }
         }
-        //--------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------
         //Chon Ten Banh
         public string tenBanh;
         private void CheckedChange_radTenBanh(object sender, EventArgs e)
@@ -61,11 +61,11 @@ namespace BaiTapLon_KiemThuPhanMem
             lblTenBanh.Text = tenBanh;
             tienLoaiPizza = bus.getTienHang(tenBanh);
             bus.GetDataRowHang(tb, tenBanh);
-            bus.RemoveGetDataRowHang(tb, tenBanh);
+            //bus.RemoveGetDataRowHang(tb, tenBanh);
             lblTienTenBanh.Text = tienLoaiPizza.ToString();
         }
-        //--------------------------------------------------------------------------------------------------------------------------------------
-        //Chon Size
+//--------------------------------------------------------------------------------------------------------------------------------------
+        ////Chon Size
         private void CheckedChange_radSize(object sender, EventArgs e)
         {
             RadioButton rad = sender as RadioButton;
@@ -240,9 +240,7 @@ namespace BaiTapLon_KiemThuPhanMem
             
         }
 
-        
-        
-        
+//--------------------------------------------------------------------------------------------------------------------------------------
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (lblTenBanh.Text != "")
@@ -256,7 +254,7 @@ namespace BaiTapLon_KiemThuPhanMem
                 pizza.SubItems.Add(tongTien.ToString());
                 listView1.Items.Add(pizza);
                 tbtmp = tb;
-                //dataGridView1.DataSourceChanged += tbtmp;
+                dataGridView1.DataSource = tb ;
                 dataGridView2.DataSource = tbtmp;
 
                 
@@ -289,23 +287,6 @@ namespace BaiTapLon_KiemThuPhanMem
             }
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             //Tên Bánh
@@ -327,9 +308,13 @@ namespace BaiTapLon_KiemThuPhanMem
         private void btnLuu_Click(object sender, EventArgs e)
         {
 
-            dataGridView1.DataSource = tbtmp;
+            dataGridView1.DataSource = tb;
         }
 
-        
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e) { }
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e) { }
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e) { }
+
+
     }
 }
