@@ -40,7 +40,6 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChonBanh = new System.Windows.Forms.Button();
             this.radRau = new System.Windows.Forms.RadioButton();
             this.radTom = new System.Windows.Forms.RadioButton();
             this.radThapCam = new System.Windows.Forms.RadioButton();
@@ -73,7 +72,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.tPgSize = new System.Windows.Forms.TabPage();
-            this.btnChonSize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radLon = new System.Windows.Forms.RadioButton();
             this.radThuong = new System.Windows.Forms.RadioButton();
@@ -87,9 +85,8 @@
             this.radDeBanh_Vua = new System.Windows.Forms.RadioButton();
             this.radDeBanh_Mong = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnChonVien_De = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radVienPhoMai = new System.Windows.Forms.RadioButton();
+            this.radVienXucXich = new System.Windows.Forms.RadioButton();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -281,7 +278,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnChonBanh);
             this.panel1.Controls.Add(this.radRau);
             this.panel1.Controls.Add(this.radTom);
             this.panel1.Controls.Add(this.radThapCam);
@@ -292,16 +288,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 125);
             this.panel1.TabIndex = 1;
-            // 
-            // btnChonBanh
-            // 
-            this.btnChonBanh.Location = new System.Drawing.Point(324, 85);
-            this.btnChonBanh.Name = "btnChonBanh";
-            this.btnChonBanh.Size = new System.Drawing.Size(123, 37);
-            this.btnChonBanh.TabIndex = 6;
-            this.btnChonBanh.Text = "OK";
-            this.btnChonBanh.UseVisualStyleBackColor = true;
-            this.btnChonBanh.Click += new System.EventHandler(this.btnChonBanh_Click);
             // 
             // radRau
             // 
@@ -698,7 +684,6 @@
             // 
             // tPgSize
             // 
-            this.tPgSize.Controls.Add(this.btnChonSize);
             this.tPgSize.Controls.Add(this.panel2);
             this.tPgSize.Controls.Add(this.pictureBox8);
             this.tPgSize.Controls.Add(this.pictureBox7);
@@ -711,15 +696,6 @@
             this.tPgSize.TabIndex = 1;
             this.tPgSize.Text = "Kích Cỡ Bánh";
             this.tPgSize.UseVisualStyleBackColor = true;
-            // 
-            // btnChonSize
-            // 
-            this.btnChonSize.Location = new System.Drawing.Point(327, 286);
-            this.btnChonSize.Name = "btnChonSize";
-            this.btnChonSize.Size = new System.Drawing.Size(123, 37);
-            this.btnChonSize.TabIndex = 7;
-            this.btnChonSize.Text = "OK";
-            this.btnChonSize.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -829,9 +805,8 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.btnChonVien_De);
-            this.splitContainer1.Panel2.Controls.Add(this.radioButton2);
-            this.splitContainer1.Panel2.Controls.Add(this.radioButton1);
+            this.splitContainer1.Panel2.Controls.Add(this.radVienPhoMai);
+            this.splitContainer1.Panel2.Controls.Add(this.radVienXucXich);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox32);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox31);
             this.splitContainer1.Panel2.Controls.Add(this.label8);
@@ -888,40 +863,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Đế Bánh";
             // 
-            // btnChonVien_De
+            // radVienPhoMai
             // 
-            this.btnChonVien_De.Location = new System.Drawing.Point(246, 294);
-            this.btnChonVien_De.Name = "btnChonVien_De";
-            this.btnChonVien_De.Size = new System.Drawing.Size(132, 37);
-            this.btnChonVien_De.TabIndex = 33;
-            this.btnChonVien_De.Text = "OK";
-            this.btnChonVien_De.UseVisualStyleBackColor = true;
+            this.radVienPhoMai.AutoSize = true;
+            this.radVienPhoMai.Location = new System.Drawing.Point(397, 249);
+            this.radVienPhoMai.Margin = new System.Windows.Forms.Padding(4);
+            this.radVienPhoMai.Name = "radVienPhoMai";
+            this.radVienPhoMai.Size = new System.Drawing.Size(129, 24);
+            this.radVienPhoMai.TabIndex = 32;
+            this.radVienPhoMai.TabStop = true;
+            this.radVienPhoMai.Text = "Viền Phô Mai";
+            this.radVienPhoMai.UseVisualStyleBackColor = true;
+            this.radVienPhoMai.CheckedChanged += new System.EventHandler(this.CheckedChang_VienBanh);
             // 
-            // radioButton2
+            // radVienXucXich
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(397, 249);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(129, 24);
-            this.radioButton2.TabIndex = 32;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Viền Phô Mai";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.CheckedChang_VienBanh);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(111, 249);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(135, 24);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Viền Xúc Xích";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.CheckedChang_VienBanh);
+            this.radVienXucXich.AutoSize = true;
+            this.radVienXucXich.Location = new System.Drawing.Point(111, 249);
+            this.radVienXucXich.Margin = new System.Windows.Forms.Padding(4);
+            this.radVienXucXich.Name = "radVienXucXich";
+            this.radVienXucXich.Size = new System.Drawing.Size(135, 24);
+            this.radVienXucXich.TabIndex = 7;
+            this.radVienXucXich.TabStop = true;
+            this.radVienXucXich.Text = "Viền Xúc Xích";
+            this.radVienXucXich.UseVisualStyleBackColor = true;
+            this.radVienXucXich.CheckedChanged += new System.EventHandler(this.CheckedChang_VienBanh);
             // 
             // pictureBox32
             // 
@@ -1606,7 +1572,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(1295, 375);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(318, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(318, 251);
             this.dataGridView2.TabIndex = 31;
             // 
             // FrmChinh
@@ -1812,8 +1778,8 @@
         private System.Windows.Forms.RadioButton radDeBanh_Vua;
         private System.Windows.Forms.RadioButton radDeBanh_Mong;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radVienPhoMai;
+        private System.Windows.Forms.RadioButton radVienXucXich;
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.PictureBox pictureBox31;
         private System.Windows.Forms.Label label8;
@@ -1825,8 +1791,5 @@
         private System.Windows.Forms.Label lblTienTenBanh;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button btnChonBanh;
-        private System.Windows.Forms.Button btnChonSize;
-        private System.Windows.Forms.Button btnChonVien_De;
     }
 }

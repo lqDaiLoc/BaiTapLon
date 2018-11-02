@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using TOD;
 
 
 namespace BaiTapLon_KiemThuPhanMem
 {
     public partial class FrmChinh : Form
     {
+        
         public FrmChinh()
         {
             InitializeComponent();
         }
+        bool flag = true;
         double tienNuoc = 0;
         double tienLoaiPizza = 0;
         double tienVoBanh = 0;
@@ -47,22 +50,20 @@ namespace BaiTapLon_KiemThuPhanMem
         }
 //--------------------------------------------------------------------------------------------------------------------------------------
         //Chon Ten Banh
-        public string tenBanh;
         private void CheckedChange_radTenBanh(object sender, EventArgs e)
         {
-            
+            string tenBanh;
             RadioButton rad = sender as RadioButton;
             tenBanh = rad.Text;
-            
-        }
-        
-        private void btnChonBanh_Click(object sender, EventArgs e)
-        {
             lblTenBanh.Text = tenBanh;
             tienLoaiPizza = bus.getTienHang(tenBanh);
-            bus.GetDataRowHang(tb, tenBanh);
-            //bus.RemoveGetDataRowHang(tb, tenBanh);
             lblTienTenBanh.Text = tienLoaiPizza.ToString();
+
+            if (rad.Checked == true)
+                bus.GetDataRowHang(tb, tenBanh);
+            else
+                if (!rad.Checked && flag != false)
+                    bus.RemoveGetDataRowHang(tb, tenBanh);
         }
 //--------------------------------------------------------------------------------------------------------------------------------------
         ////Chon Size
@@ -70,14 +71,14 @@ namespace BaiTapLon_KiemThuPhanMem
         {
             RadioButton rad = sender as RadioButton;
             lblSize.Text = rad.Text;
-            if (rad.Checked)
-            {
-                tienSize = bus.getTienHang(rad.Text);
-                //bus.GetDataRowHang(tb, rad.Text);
-                lblTienSize.Text = "x" + tienSize.ToString();
-                
+            tienSize = bus.getTienHang(rad.Text);
+            lblTienSize.Text = "x" + tienSize.ToString();
 
-            }
+            if (rad.Checked)
+                bus.GetDataRowHang(tb, rad.Text);
+            else
+                if(!rad.Checked && flag != false)
+                    bus.RemoveGetDataRowHang(tb, rad.Text);
         }
 //--------------------------------------------------------------------------------------------------------------------------------------
         //Chon nước uống
@@ -169,49 +170,60 @@ namespace BaiTapLon_KiemThuPhanMem
             tongTien += tienNuoc;
 
         }
-//--------------------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------------------------------
         // CHon tp Phu
         private void CheckedChanged_TpPhu(object sender, EventArgs e)
         {
             CheckBox check = sender as CheckBox;
             if (check.Checked)
             {
+                flag = true;
                 bus.GetDataRowHang(tb, check.Text);
                 lblTpPhu.Text += check.Text + ", ";
                 tienTpPhu += bus.getTienHang(check.Text);
             }
-            if (!check.Checked)
+            else
             {
-                bus.RemoveGetDataRowHang(tb, check.Text);
-                lblTpPhu.Text = lblTpPhu.Text.Replace(check.Text + ", ", "");
-                tienTpPhu -= bus.getTienHang(check.Text);
+                if (!check.Checked && flag != false)
+                {
+                    bus.RemoveGetDataRowHang(tb, check.Text);
+                    lblTpPhu.Text = lblTpPhu.Text.Replace(check.Text + ", ", "");
+                    tienTpPhu -= bus.getTienHang(check.Text);
+                }
             }
             lblTienPhu.Text = tienTpPhu.ToString();
         }
-//--------------------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------------------------------
         // Chon De Banh
         private void CheckedChang_DeBanh(object sender, EventArgs e)
         {
             RadioButton rad = sender as RadioButton;
+            lblDeBanh.Text = "Đế Bánh " + rad.Text;
             if (rad.Checked)
-            {
-                lblDeBanh.Text = "Đế Bánh " + rad.Text;
-            }
+                bus.GetDataRowHang(tb, rad.Text);
             else
-                lblDeBanh.Text = "";
-
+                if (!rad.Checked && flag)
+                    bus.RemoveGetDataRowHang(tb, rad.Text);
         }
-//--------------------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------------------------------
         // Chon Vien Banh
         private void CheckedChang_VienBanh(object sender, EventArgs e)
         {
             RadioButton rad = sender as RadioButton;
+            lblVienBanh.Text = rad.Text;
             if (rad.Checked)
-            {
-                lblVienBanh.Text = rad.Text;
+            {   
                 tienVoBanh = bus.getTienHang(rad.Text);
+                bus.GetDataRowHang(tb, rad.Text);
             }
-
+            else
+            {
+                if(!rad.Checked && flag)
+                {
+                    tienVoBanh -= bus.getTienHang(rad.Text);
+                    bus.RemoveGetDataRowHang(tb, rad.Text);
+                }
+            }
             lblTienVoBanh.Text = tienVoBanh.ToString();
         }
 //--------------------------------------------------------------------------------------------------------------------------------------
@@ -239,28 +251,24 @@ namespace BaiTapLon_KiemThuPhanMem
                         
             
         }
-
 //--------------------------------------------------------------------------------------------------------------------------------------
+
+        
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (lblTenBanh.Text != "")
             {
-                ListViewItem pizza = new ListViewItem(lblTenBanh.Text);
-                pizza.SubItems.Add(lblTpPhu.Text);
-                pizza.SubItems.Add(lblSize.Text);
-                pizza.SubItems.Add(lblDeBanh.Text + " " + lblVienBanh.Text);
-                pizza.SubItems.Add(lblThucUong.Text);
                 tongTien = (tienVoBanh + tienTpPhu + tienNuoc + tienLoaiPizza) * tienSize;
-                pizza.SubItems.Add(tongTien.ToString());
-                listView1.Items.Add(pizza);
-                tbtmp = tb;
-                dataGridView1.DataSource = tb ;
-                dataGridView2.DataSource = tbtmp;
+                Build bill = new Build(lblTenBanh.Text, lblTpPhu.Text, lblSize.Text, lblDeBanh.Text, lblVienBanh.Text, lblThucUong.Text, tongTien);
+                bus.AddItem(bill, listView1);
 
-                
+                dataGridView1.DataSource = tb;
+                tbtmp = tb;
+                dataGridView2.DataSource = tbtmp;
                 
                 //----------------------------------------------------------------------------------------------------------
                 // Thanh phan phu
+                flag = false;
                 checkBox1.Checked = checkBox2.Checked = checkBox3.Checked = checkBox4.Checked = checkBox5.Checked = false;
                 checkBox6.Checked = checkBox7.Checked = checkBox8.Checked = checkBox9.Checked = false;
                 checkBox10.Checked = checkBox11.Checked = checkBox12.Checked = false;
@@ -268,6 +276,8 @@ namespace BaiTapLon_KiemThuPhanMem
                 radLon.Checked = radNho.Checked = radThuong.Checked = false;
                 // Ten Banh
                 radHaiSan.Checked = radXucXich.Checked = radThapCam.Checked = radTom.Checked = radRau.Checked = false;
+                // De Banh
+                radDeBanh_Day.Checked = radDeBanh_Mong.Checked = radDeBanh_Vua.Checked = radVienPhoMai.Checked = radVienXucXich.Checked = false;
                 // Thuc Uong
                 txtSoLuongBiDao.Text = txtSoLuongCam.Text = txtSoLuongCoCa.Text = txtSoLuongDrThanh.Text = txtSoLuongNumberOne.Text = "0";
                 txtSoLuongPesi.Text = txtSoLuongSoda.Text = txtSoLuongSting.Text = txtSoLuongSuoi.Text = txtSoLuongSuprise.Text = "0";
@@ -279,6 +289,7 @@ namespace BaiTapLon_KiemThuPhanMem
                 // label tien
                 lblTienNuoc.Text = lblTienPhu.Text = lblTienSize.Text = lblTienTenBanh.Text = lblTienVoBanh.Text = "";
                 //----------------------------------------------------------------------------------------------------------
+                flag = true;
                 return;
             }
             else
@@ -315,6 +326,6 @@ namespace BaiTapLon_KiemThuPhanMem
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e) { }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e) { }
 
-
+        
     }
 }

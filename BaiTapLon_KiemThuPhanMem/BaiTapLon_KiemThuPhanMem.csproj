@@ -93,6 +93,13 @@
       <Project>{da1e83fc-5fe2-4738-8067-67e496f2469e}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TOD1\TOD.csproj">
+      <Project>{4fb968e1-eca0-479c-bc44-f919855ec5f1}</Project>
+      <Name>TOD</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

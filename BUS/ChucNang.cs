@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+using TOD;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
@@ -12,6 +13,7 @@ namespace BUS
 {
     public class BUS_ChucNang
     {
+
         //lay gia tien cua ten banh
         public double getTienHang(string tenBanh)
         {
@@ -45,19 +47,27 @@ namespace BUS
 
         }
 
-        //Lay Thong tin hang
+        /// <summary>
+        /// Nhap thong tin hang vao tb
+        /// </summary>
+        /// <param name="tb"></param>
+        /// <param name="tenHang"></param>
         public void GetDataRowHang(DataTable tb, string tenHang)
         {
             DataRow row = tb.NewRow();
             DataProvider dp = new DataProvider();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, SoLuong = 1, GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
+            SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, MaLoai, SoLuong = 1, GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
+
             adapter.Fill(tb);
 
         }
+        /// <summary>
+        /// Xoa thong tin cua hang khoi table
+        /// </summary>
+        /// <param name="tb"></param>
+        /// <param name="tenHang"></param>
         public void RemoveGetDataRowHang(DataTable tb, string tenHang)
-        {
-            
-            
+        {   
             foreach(DataRow ros in tb.Rows)
             {
                 if (ros["TenHang"].ToString() == tenHang)
@@ -66,49 +76,33 @@ namespace BUS
                     return;    
                 }
             }
-            //DataRow row = tb.NewRow();
-            //DataProvider dp = new DataProvider();
-            //SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, SoLuong = 1, GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
-            //adapter.Fill(tb);
-
         }
+        /// <summary>
+        /// Lay thong tin nuoc uong cua khach vao table, Co lay so luong
+        /// </summary>
+        /// <param name="tb"></param>
+        /// <param name="tenHang"></param>
+        /// <param name="SoLuong"></param>
         public void GetDataRowNuoc(DataTable tb, string tenHang, int SoLuong)
         {
             DataRow row = tb.NewRow();
             DataProvider dp = new DataProvider();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, SoLuong = '" + SoLuong.ToString() + "' , GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
+            SqlDataAdapter adapter = new SqlDataAdapter("Select MaHang, TenHang, MaLoai, SoLuong = '" + SoLuong.ToString() + "' , GiaHang from Hang Where TenHang = N'" + tenHang.ToString() + "'", dp.cnn);
             adapter.Fill(tb);
         }
-
-        // lay size banh
-        public double getSizeBanh(string SizeBanh)
+        /// <summary>
+        /// Them bill vao listView
+        /// </summary>
+        /// <param name="bill"></param>
+        public void AddItem(Build bill, ListView listView1)
         {
-            double size;
-            DataProvider dp = new DataProvider();
-            dp.ConnecTion();
-
-            string sql = "Select SoLuongCon FROM Hang WHERE TenHang = 'Nhỏ'";
-            SqlCommand cmd = new SqlCommand(sql);
-            cmd.Connection = dp.cnn;
-            cmd.CommandText = sql;
-            cmd.CommandType = CommandType.Text;
-            try
-            {
-                string s = cmd.ExecuteScalar().ToString();
-                size = double.Parse(s);
-                dp.DisConnecTion();
-                return size;
-               
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Sai Size...", "error getSizeBanh");
-                throw ex;
-            }
-            finally
-            {
-                dp.DisConnecTion();
-            }
+            ListViewItem pizza = new ListViewItem(bill.TenBanh);
+            pizza.SubItems.Add(bill.TpPhu);
+            pizza.SubItems.Add(bill.Size);
+            pizza.SubItems.Add(bill.DeBanh + " " + bill.VienBanh);
+            pizza.SubItems.Add(bill.ThucUong);
+            pizza.SubItems.Add(bill.TongTien.ToString());
+            listView1.Items.Add(pizza);
         }
     }
 }
